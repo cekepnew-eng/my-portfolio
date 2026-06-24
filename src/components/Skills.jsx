@@ -34,7 +34,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="keahlian" className="py-32 bg-base-900 border-t border-base-800 overflow-hidden">
+    <section id="keahlian" className="py-32 bg-base-900 border-t border-base-800 overflow-x-hidden">
       <div className="container mx-auto px-6 md:px-12">
         <div className="mb-20">
           <h2 className="text-sm font-bold tracking-widest uppercase text-base-100/40 mb-2">Area Keahlian</h2>
@@ -51,7 +51,7 @@ const Skills = () => {
               onHoverEnd={() => setHoveredIndex(null)}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ delay: index * 0.1 }}
             >
               {/* Hover Background Fill */}
