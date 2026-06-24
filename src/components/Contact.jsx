@@ -44,6 +44,19 @@ const Contact = () => {
                   Instagram
                 </a>
               </div>
+
+              {/* Clickable Small Address */}
+              <div className="mt-4">
+                <a 
+                  href="https://maps.google.com/?q=Jawa+Barat+Bogor+Ciomas+Kavling+Sukarapih+Bougenvile+1" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-[10px] md:text-xs font-sans font-medium text-base-100/30 hover:text-base-50 transition-colors duration-300 group max-w-sm leading-relaxed"
+                >
+                  <svg className="w-3.5 h-3.5 flex-shrink-0 group-hover:-translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                  <span>Jawa Barat, Bogor, Ciomas, Kavling Sukarapih Bougenvile 1</span>
+                </a>
+              </div>
             </div>
           </motion.div>
 

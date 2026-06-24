@@ -30,12 +30,20 @@ const Hero = () => {
               Memadukan ketajaman analisis data dengan integritas audit untuk menerjemahkan kompleksitas keuangan menjadi keputusan strategis.
             </p>
 
-            <div className="flex items-center gap-6">
+            <div className="flex flex-wrap items-center gap-6">
               <a 
                 href="#proyek" 
                 className="px-8 py-4 bg-base-50 text-base-900 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-base-100 transition-colors"
               >
                 Lihat Portofolio
+              </a>
+              <a 
+                href="/CV_Fawwaz_Alwan.pdf" 
+                download="CV_Fawwaz_Alwan.pdf"
+                className="px-8 py-4 border border-base-700 text-base-50 rounded-full font-bold uppercase tracking-widest text-xs hover:border-base-50 transition-colors flex items-center gap-3"
+              >
+                Unduh CV
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
               </a>
             </div>
           </motion.div>

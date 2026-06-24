@@ -3,48 +3,100 @@ import { motion } from 'framer-motion';
 
 const About = () => {
   return (
-    <section id="tentang" className="py-32 bg-base-900 border-t border-base-800 relative overflow-hidden">
+    <section id="tentang" className="py-32 relative bg-base-900 border-t border-base-800">
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         
-        <div className="max-w-4xl mx-auto">
-          <motion.h2 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-sm font-bold tracking-widest uppercase text-base-100/40 mb-12 text-center"
-          >
-            Sebuah Perjalanan
-          </motion.h2>
+        {/* Section Header */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex items-center gap-4 mb-20"
+        >
+          <div className="w-12 h-px bg-base-100/50"></div>
+          <h2 className="text-sm font-bold tracking-[0.2em] uppercase text-base-100/40 font-sans">Profil & Filosofi</h2>
+        </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+        {/* Massive Quote / Statement */}
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="max-w-5xl mb-32"
+        >
+          <h3 className="font-display text-4xl md:text-5xl lg:text-[4.5rem] font-bold text-base-50 leading-[1.15] tracking-tighter">
+            Bukan sekadar mencatat angka. Saya menerjemahkan data keuangan menjadi <span className="text-transparent bg-clip-text bg-gradient-to-r from-base-100/40 to-base-50">strategi bisnis yang solid.</span>
+          </h3>
+        </motion.div>
+
+        {/* Content Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 border-t border-base-800 pt-20">
+          
+          {/* Left Context */}
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="prose prose-invert prose-lg md:prose-2xl max-w-none text-base-100/80 font-light leading-relaxed text-center"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="lg:col-span-5 flex flex-col justify-between"
           >
-            <p className="mb-8">
-              Halo, saya <strong className="text-base-50 font-bold">Fawwaz Alwan</strong>. Ketertarikan saya pada dinamika organisasi dan kepemimpinan bermula ketika saya dipercaya mengemban amanah sebagai <strong className="text-base-50 font-bold">Ketua OSIS di SMA Kosgoro</strong>. Masa-masa itu membentuk karakter saya dalam memimpin tim, mengambil keputusan di bawah tekanan, dan memahami pentingnya tata kelola yang baik.
-            </p>
-            <p className="mb-8">
-              Perjalanan tersebut membawa saya melangkah lebih jauh ke <strong className="text-base-50 font-bold">IPB University</strong>, menempuh studi S1 di bidang Akuntansi. Di sini, saya menyadari bahwa seni memimpin sebuah entitas sangat erat kaitannya dengan bagaimana kita memahami bahasa finansialnya.
-            </p>
-            <p>
-              Bagi saya, akuntansi bukan sekadar pembukuan pasif. Ini adalah instrumen strategis untuk <span className="italic text-base-100/60">menjaga transparansi, memitigasi risiko, dan mendikte arah bisnis</span> ke depan. Dengan IPK 3.85, saya tidak hanya mengejar nilai akademis, tetapi benar-benar mendalami bagaimana angka-angka tersebut dapat bercerita dan memberikan solusi strategis di dunia nyata.
-            </p>
+            <div>
+              <p className="text-xl md:text-2xl text-base-100/80 leading-relaxed font-light mb-10 font-sans">
+                Sebagai mahasiswa Akuntansi di IPB University, saya menggabungkan ketajaman analitis dengan pemahaman mendalam tentang ekosistem bisnis modern.
+              </p>
+              <p className="text-base md:text-lg text-base-100/50 leading-relaxed font-light mb-16 font-sans">
+                Kepemimpinan saya ditempa secara nyata—mulai dari memimpin organisasi berskala besar (OSIS SMA Kosgoro) hingga mengelola sirkulasi dana himpunan bernilai puluhan juta rupiah dengan akurasi absolut dan transparansi tinggi.
+              </p>
+            </div>
+
+            {/* Minimalist Stats */}
+            <div className="flex flex-wrap gap-12 md:gap-20">
+              <div>
+                <div className="font-display text-5xl md:text-6xl font-bold text-base-50 mb-3 tracking-tighter">3.8<span className="text-base-100/30">+</span></div>
+                <div className="text-xs tracking-[0.2em] uppercase font-bold text-base-100/40 font-sans">IPK Target</div>
+              </div>
+              <div>
+                <div className="font-display text-5xl md:text-6xl font-bold text-base-50 mb-3 tracking-tighter">100<span className="text-base-100/30">%</span></div>
+                <div className="text-xs tracking-[0.2em] uppercase font-bold text-base-100/40 font-sans">Akurasi Audit</div>
+              </div>
+            </div>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+          {/* Right Image / Graphic element */}
+          <motion.div 
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
-            className="mt-16 flex justify-center"
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="lg:col-span-7"
           >
-            <div className="w-px h-24 bg-gradient-to-b from-base-700 to-transparent"></div>
+            <div className="w-full h-full min-h-[500px] bg-base-800/30 rounded-[2rem] border border-base-800 overflow-hidden relative group shadow-2xl">
+              <div className="absolute inset-0 bg-base-900/50 mix-blend-multiply z-10 group-hover:opacity-0 transition-opacity duration-700"></div>
+              
+              {/* Aesthetic Corporate / Abstract Architecture Image */}
+              <img 
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200" 
+                alt="Corporate Architecture Abstract" 
+                className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
+              />
+              
+              <div className="absolute bottom-8 left-8 md:bottom-12 md:left-12 z-20">
+                <div className="text-xs font-bold tracking-[0.2em] uppercase text-base-50 border border-base-50/20 bg-base-900/30 px-6 py-3 backdrop-blur-md rounded-full font-sans">
+                  Integritas & Eksekusi
+                </div>
+              </div>
+
+              {/* Decorative Element */}
+              <div className="absolute top-8 right-8 z-20">
+                <svg className="w-12 h-12 text-base-50/50 group-hover:rotate-90 transition-transform duration-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </div>
+            </div>
           </motion.div>
+          
         </div>
-
       </div>
     </section>
   );
