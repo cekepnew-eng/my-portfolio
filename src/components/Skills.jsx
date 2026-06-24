@@ -6,21 +6,21 @@ const Skills = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const skills = [
-    { 
-      title: "Financial Accounting", 
-      details: "Penyusunan laporan keuangan standar IFRS & PSAK, analisis likuiditas, dan manajemen aset perusahaan." 
+    {
+      title: "Financial Accounting",
+      details: "Penyusunan laporan keuangan standar IFRS & PSAK, analisis likuiditas, dan manajemen aset perusahaan."
     },
-    { 
-      title: "Audit & Assurance", 
-      details: "Evaluasi pengendalian internal, mitigasi risiko (COSO Framework), dan memastikan kepatuhan regulasi." 
+    {
+      title: "Audit & Assurance",
+      details: "Evaluasi pengendalian internal, mitigasi risiko (COSO Framework), dan memastikan kepatuhan regulasi."
     },
-    { 
-      title: "Corporate Taxation", 
-      details: "Perencanaan pajak strategis, rekonsiliasi fiskal, dan pelaporan PPh/PPN yang efisien." 
+    {
+      title: "Corporate Taxation",
+      details: "Perencanaan pajak strategis, rekonsiliasi fiskal, dan pelaporan PPh/PPN yang efisien."
     },
-    { 
-      title: "Data Analytics", 
-      details: "Pemodelan keuangan, ekstraksi wawasan dari big data, dan visualisasi interaktif menggunakan Power BI." 
+    {
+      title: "Data Analytics",
+      details: "Pemodelan keuangan, ekstraksi wawasan dari big data, dan visualisasi interaktif menggunakan Power BI."
     }
   ];
 
@@ -34,7 +34,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="keahlian" className="py-32 bg-base-900 border-t border-base-800 overflow-x-hidden">
+    <section id="keahlian" className="py-32 bg-base-900 border-t border-base-800 overflow-hidden">
       <div className="container mx-auto px-6 md:px-12">
         <div className="mb-20">
           <h2 className="text-sm font-bold tracking-widest uppercase text-base-100/40 mb-2">Area Keahlian</h2>
@@ -44,27 +44,27 @@ const Skills = () => {
         {/* Interactive List */}
         <div className="flex flex-col border-t border-base-800">
           {skills.map((skill, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               className="border-b border-base-800 group relative"
               onHoverStart={() => setHoveredIndex(index)}
               onHoverEnd={() => setHoveredIndex(null)}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1 }}
+              viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
             >
               {/* Hover Background Fill */}
               <div className="absolute inset-0 bg-base-50 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out z-0"></div>
-              
+
               <div className="relative z-10 py-10 md:py-16 px-4 md:px-8 flex flex-col md:flex-row md:items-center justify-between cursor-default">
                 <h4 className="font-display text-4xl md:text-6xl font-bold text-base-50 group-hover:text-base-900 transition-colors duration-500 tracking-tight">
                   {skill.title}
                 </h4>
-                
+
                 <AnimatePresence>
                   {hoveredIndex === index && (
-                    <motion.div 
+                    <motion.div
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       exit={{ opacity: 0, x: 10 }}
@@ -76,7 +76,7 @@ const Skills = () => {
                     </motion.div>
                   )}
                 </AnimatePresence>
-                
+
                 {/* Mobile desc */}
                 <p className="md:hidden text-base-100/60 group-hover:text-base-900/80 mt-4 text-sm leading-relaxed transition-colors duration-500 font-sans">
                   {skill.details}

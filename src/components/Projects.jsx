@@ -59,12 +59,12 @@ const Projects = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: true }}
           className="mb-24"
         >
           <div className="flex items-center gap-4 mb-4">
-             <div className="w-12 h-px bg-base-100/50"></div>
-             <h2 className="text-sm font-bold tracking-widest uppercase text-base-100/40">Portfolio</h2>
+            <div className="w-12 h-px bg-base-100/50"></div>
+            <h2 className="text-sm font-bold tracking-widest uppercase text-base-100/40">Portfolio</h2>
           </div>
           <h3 className="font-display text-5xl md:text-7xl font-bold text-base-50 tracking-tighter">
             STUDI KASUS.
@@ -73,29 +73,29 @@ const Projects = () => {
 
         <div className="flex flex-col gap-32">
           {projects.map((project, i) => (
-            <motion.div 
+            <motion.div
               key={i}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1 }}
+              viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8 }}
               className="group relative"
             >
               <div className={`flex flex-col ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-12 items-center`}>
                 <div className="w-full md:w-3/5 h-[400px] rounded-[2rem] overflow-hidden relative shadow-2xl">
                   <div className="absolute inset-0 bg-base-900/60 mix-blend-multiply z-10 group-hover:opacity-0 transition-opacity duration-700"></div>
-                  <img 
-                    src={project.image} 
-                    alt={project.title} 
+                  <img
+                    src={project.image}
+                    alt={project.title}
                     className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transform group-hover:scale-105 transition-all duration-700"
                   />
-                  
+
                   {/* Decorative Number */}
                   <div className={`absolute top-6 ${i % 2 === 0 ? 'left-8' : 'right-8'} z-20 font-display text-[8rem] font-bold text-base-100/20 leading-none pointer-events-none group-hover:text-base-100/40 transition-colors`}>
                     0{i + 1}
                   </div>
                 </div>
-                
+
                 <div className={`w-full md:w-2/5 flex flex-col justify-center ${i % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
                   <div className="text-xs font-bold tracking-widest uppercase text-base-100/40 mb-4 border-b border-base-800 pb-2 w-max">
                     {project.category}
